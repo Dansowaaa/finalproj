@@ -2,7 +2,7 @@ const music = document.querySelector("#music");
 const audio = document.querySelector("#audiobook");
 
 const musicpage = document.querySelector("#Music-Page");
-const audiopage = document.querySelector("#audiopage");
+const audiopage = document.querySelector("#AudioBook-Page");
 
 function showPage(pageId) {
     // Hide all pages
@@ -13,15 +13,16 @@ function showPage(pageId) {
 
     // Show the selected page
     document.getElementById(pageId).style.display = 'block';
+    
 }
 music.addEventListener("click", function() {
     showPage('Music-Page');
 });
 audio.addEventListener("click", function() {
-    showPage('audiopage');
+    showPage('audiobook');
 });
 
-showPage('audiopage'); // Show the music page by default when the website loads
+showPage('Music-Page'); // Show the music page by default when the website loads
 
 var activeId = "";
 
