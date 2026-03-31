@@ -50,7 +50,7 @@ nav a {
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 21px;
   margin-bottom: 20px;
 }
 
@@ -163,15 +163,12 @@ nav a {
 
 .ahg {
   text-align: left;
-  width: 400px;
+  /* width: 400px; */
   height: 30px;
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
+  
+  /* justify-content: center;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
 }
 
 .Recommendation-Popular
@@ -221,20 +218,26 @@ nav a {
     transition: transform 0.3s;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2) ;
 }
-
+.search{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  
+}
 .search-button {
   background-color: #FCA311;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 6px 10px;
   cursor: pointer;
   font-size: 20px;
-  display: flex;
+  /* display: flex;
   float: right;
   margin: 20px;
   margin-left: -150px;
   margin-right: 86px;
-  margin-bottom: 160%;
+  margin-bottom: 160%; */
 }
 
 #hi {
