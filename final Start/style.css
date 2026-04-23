@@ -53,6 +53,20 @@ nav a {
   margin-top: 21px;
   margin-bottom: 20px;
 }
+.search-button {
+  background-color: #FCA311;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  float: right;
+  margin: 20px;
+  margin-left: -150px;
+  margin-right: 86px;
+  margin-bottom: 160%;
+}
 
 .music-recommendation
  {
@@ -87,54 +101,12 @@ nav a {
     max-width: 150px;
     min-width: 150px;
     max-height: 150px;
-    min-height: 200px;
+    min-height: 150px;
     align-content: center;
-}
-
-
-
-.plant-item {
-    display: flex;
-    flex-direction: row;
-}
-
-.plant-item:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2) ;
-}
-
-.search-button {
-  background-color: #FCA311;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 20px;
-  display: flex;
-  float: right;
-  margin: 20px;
-  margin-left: -150px;
-  margin-right: 86px;
-  margin-bottom: 160%;
 }
 
 body {
   background-color: #012A4A;
-}
-
-div {
-  color: white;
-  padding: 10px;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
-a:hover {
-  color: #FCA311;
 }
 
 nav {
@@ -163,12 +135,30 @@ nav a {
 
 .ahg {
   text-align: left;
-  /* width: 400px; */
+  width: 400px;
   height: 30px;
-  
-  /* justify-content: center;
+  justify-content: center;
   margin-top: 20px;
-  margin-bottom: 20px; */
+  margin-bottom: 20px; 
+}
+.search{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.search-button {
+  background-color: #FCA311;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  float: right;
+  margin: 20px;
+  margin-left: -150px;
+  margin-right: 86px;
+  margin-bottom: 160%; 
 }
 
 .Recommendation-Popular
@@ -178,66 +168,6 @@ nav a {
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
-}
-
-.flowers {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin:auto;
-    display: block;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 150px;
-    min-width: 150px;
-    max-height: 150px;
-    min-height: 0px;
-    align-content: center;
-}
-
-.flower {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin:auto;
-    display: block;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 150px;
-    min-width: 150px;
-    max-height: 150px;
-    min-height: 200px;
-    align-content: center;
-}
-
-.plant-item {
-    display: flex;
-    flex-direction: row;
-}
-
-.plant-item:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2) ;
-}
-.search{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  
-  
-}
-.search-button {
-  background-color: #FCA311;
-  color: white;
-  border: none;
-  padding: 6px 10px;
-  cursor: pointer;
-  font-size: 20px;
-  /* display: flex;
-  float: right;
-  margin: 20px;
-  margin-left: -150px;
-  margin-right: 86px;
-  margin-bottom: 160%; */
 }
 
 #hi {
@@ -251,10 +181,8 @@ nav a {
   height: 100px;
 }
 
-
-
-
 .navbar {
+  margin-top: 30px;
   overflow: hidden;
   background-color: #333;
   position: fixed;
