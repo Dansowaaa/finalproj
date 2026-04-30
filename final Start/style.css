@@ -68,32 +68,32 @@ nav a {
   margin-bottom: 160%;
 }
 
-.first-row
- {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+.first-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
+
 .trending-item:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2) ;
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2) ;
 }
 
 .flowers {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin:auto;
-    display: block;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 150px;
-    min-width: 150px;
-    max-height: 150px;
-    min-height: 0px;
-    align-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin:auto;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 150px;
+  min-height: 0px;
+  align-content: center;
 }
 
 .flower {
@@ -231,3 +231,13 @@ nav a {
   background-color: #04AA6D;
   color: white;
 }
+.dd{
+  display: flex;
+  justify-content: space-around;
+  color: white
+  fontsize: 20px;
+  background-color: #8B8C89;
+  padding: 20px;
+  padding-top: 70px;
+ }
+ /* style="color: white; font-size: 80px; margin: 0; margin-top: -57px; margin-left: 8px;" */
