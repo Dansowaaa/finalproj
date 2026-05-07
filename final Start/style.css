@@ -229,16 +229,20 @@ nav a {
   padding-top: 30px;
   text-decoration: none;
   font-size: 20px;
+  background-color: #012A4A;
+  border-radius: 10%;
 }
 
 .navbar a:hover {
-  background: #f1f1f1;
+  background: #385973;
   color: black;
 }
 
 .navbar a.active {
-  background-color: #041F35;
-  color: white;
+  background-color: #AC9834;
+  color: #012A4A;
+  border-width: 4;
+  border-color: pink;
 }
 
 .dd{
@@ -252,53 +256,3 @@ nav a {
  }
  /* style="color: white; font-size: 80px; margin: 0; margin-top: -57px; margin-left: 8px;" */
 
-
-
-div.scrollmenu {
-  background-color: #333;
-  overflow: auto;
-  white-space: nowrap;
-}
-div.scrollmenu a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
-
-div.scrollmenu a:hover {
-  background-color: #777;
-}
-
-.bottom{
-  height:100px
-
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.scroll-cell {
-  background: #EEE;
-}
-
-.scroll-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  counter-increment: gallery-cell;
-}
-
-/* cell number */
-.scroll-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-}
