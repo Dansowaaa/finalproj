@@ -208,12 +208,13 @@ nav a {
   justify-content: center;
   gap: 15px;
   margin-top: 20px;}
+
 .navbar {
   display: flex;
   justify-content: space-evenly;
   margin-top: 30px;
   overflow: hidden;
-  background-color: #333;
+  background-color: #8B8C89;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -223,7 +224,6 @@ nav a {
 .navbar a {
   justify-content: space-around;
   float: left;
-  color: #f2f2f2;
   text-align: center;
   padding: 20px;
   padding-top: 30px;
@@ -237,9 +237,10 @@ nav a {
 }
 
 .navbar a.active {
-  background-color: #04AA6D;
+  background-color: #041F35;
   color: white;
 }
+
 .dd{
   display: flex;
   justify-content: space-around;
@@ -250,3 +251,54 @@ nav a {
   padding-top: 25px;
  }
  /* style="color: white; font-size: 80px; margin: 0; margin-top: -57px; margin-left: 8px;" */
+
+
+
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
+.bottom{
+  height:100px
+
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.scroll-cell {
+  background: #EEE;
+}
+
+.scroll-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.scroll-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
