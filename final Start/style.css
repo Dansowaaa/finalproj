@@ -31,6 +31,20 @@ nav a {
   font-size: 30px;
 }
 
+/* nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #8B8C89;
+  padding: 20px;
+  padding-top: 70px;
+}
+
+nav a {
+  color: rgb(38, 32, 59);
+  text-decoration: none;
+  font-size: 30px;
+} */
+
 #music.active {
   color: rgb(255, 255, 255);
   text-shadow: 0px 5px 8px #000000;
@@ -40,6 +54,7 @@ nav a {
   color: rgb(255, 255, 255);
   text-shadow: 0px 5px 8px #000000;
 }
+
 
 .ahg {
   text-align: left;
@@ -112,7 +127,7 @@ nav a {
 
 
 
-nav {
+/* nav {
   display: flex;
   justify-content: space-around;
   background-color: #8B8C89;
@@ -124,9 +139,9 @@ nav a {
   color: rgb(38, 32, 59);
   text-decoration: none;
   font-size: 30px;
-}
+} */
 
-#music.active {
+/* #music.active {
   color: rgb(255, 255, 255);
   text-shadow: 0px 5px 8px #000000;
 }
@@ -134,7 +149,7 @@ nav a {
 #audiobook.active {
   color: rgb(255, 255, 255);
   text-shadow: 0px 5px 8px #000000;
-}
+} */
 
 .ahg {
   text-align: left;
@@ -212,18 +227,20 @@ nav a {
 .navbar {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 30px;
+  position: fixed;
+  padding-top: 20px;
   overflow: hidden;
   background-color: #8B8C89;
-  position: fixed;
   bottom: 0;
-  width: 100%;
+  left: 20px;
+  right: 20px;
   justify-items: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .navbar a {
   justify-content: space-around;
-  float: left;
   text-align: center;
   padding: 20px;
   padding-top: 30px;
@@ -244,10 +261,9 @@ nav a {
   border-width: 4;
   border-color: pink;
 }
-.dsj{
-  sjnk
-}
-.dd{
+
+
+/* .dd{
   display: flex;
   justify-content: space-around;
   color: rgb(38, 32, 59);
@@ -255,6 +271,6 @@ nav a {
   background-color: #8B8C89;
   padding: 20px;
   padding-top: 25px;
- }
+ } */
  /* style="color: white; font-size: 80px; margin: 0; margin-top: -57px; margin-left: 8px;" */
 
