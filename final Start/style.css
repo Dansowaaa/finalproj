@@ -33,7 +33,6 @@ nav a {
 }
 
 
-
 /* nav {
   display: flex;
   justify-content: space-around;
@@ -314,7 +313,14 @@ nav a {
     display: flex;
     align-items: center;
 } */
- 
+
+.page a:hover {
+  background-color: #1B4965;
+  transform: translateY(-9px);
+  transform: translateY(-6px);
+  border: 4px solid #012A4A;
+  border-radius: 30%;
+} 
 /* .dd{
   display: flex;
   justify-content: space-around;
