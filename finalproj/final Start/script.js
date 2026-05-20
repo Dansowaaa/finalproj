@@ -34,7 +34,25 @@ function addActiveClass(elId) {
   activeId = elId;
 }
 
+function markCurrentNavLink() {
+  var path = window.location.pathname;
+  var page = path.substring(path.lastIndexOf('/') + 1).toLowerCase();
+  var musicLink = document.getElementById('music');
+  var audioLink = document.getElementById('audiobook');
+  if (!musicLink || !audioLink) return;
+
+  musicLink.classList.remove('active');
+  audioLink.classList.remove('active');
+
+  if (page.indexOf('audiobook') !== -1 || page.indexOf('recommendeda') !== -1 || page.indexOf('recenta') !== -1 || page.indexOf('trending') !== -1) {
+    audioLink.classList.add('active');
+  } else if (page.indexOf('music') !== -1 || page.indexOf('popularm') !== -1 || page.indexOf('recommendedm') !== -1) {
+    musicLink.classList.add('active');
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+  markCurrentNavLink();
   document.querySelectorAll('.first-row').forEach(function(row) {
     var wrapper = document.createElement('div');
     wrapper.className = 'carousel-wrapper';

@@ -33,29 +33,11 @@ nav a {
   font-size: 30px;
 }
 
-
-/* nav {
-  display: flex;
-  justify-content: space-around;
-  background-color: #8B8C89;
-  padding: 20px;
-  padding-top: 70px;
-}
-
-nav a {
-  color: rgb(38, 32, 59);
-  text-decoration: none;
-  font-size: 30px;
-} */
-
-#music.active {
-  color: rgb(255, 255, 255);
-  text-shadow: 0px 5px 8px #000000;
-}
-
-#audiobook.active {
-  color: rgb(255, 255, 255);
-  text-shadow: 0px 5px 8px #000000;
+nav a:active,
+nav a.active {
+  color: #012A4A;
+  font-weight: bold;
+  text-shadow: 0 0 2px rgba(0, 0, 255, 0.5);
 }
 
 
@@ -216,7 +198,8 @@ nav a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 20px;}
+  margin-top: 20px;
+}
 
 .navbar {
   display: flex;
@@ -246,7 +229,8 @@ nav a {
   font-size: 90%;
   font-style: italic;
   background-color: #012A4A;
-  border-radius: 20%;
+  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -368,7 +352,38 @@ nav a {
   width: 90%;
   text-align: center;
   align-items: center;
+  border-radius: 6px;
+  /* text-only glow */
+  text-shadow: 0 0 6px rgba(172,152,52,0.5);
+  animation: textGlow 2s infinite ease-in-out;
 }
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 6px rgba(172,152,52,0.35);
+  }
+  50% {
+    text-shadow: 0 0 18px rgba(172,152,52,0.95);
+  }
+}
+
+.centeredpage:hover {
+  animation-duration: 1s;
+}
+
+.section-heading-link {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: transparent;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0;
+}
+
 .hm{
   border-radius: 10px;
 }
