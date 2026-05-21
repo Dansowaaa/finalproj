@@ -18,8 +18,21 @@
 
   <div style="background-color:#385973 ;">
     <h2 style="color: #AC9834; background-color: #093150; padding: 5px; width: 90%">Profile</h2>
-    <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Profile <Picture></Picture></h2>
-    <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Display Name</h2>
+    <div style="background-color: #8B8C89; padding: 5px; width: 90%;">
+      <h2 style="margin: 0;">Profile Picture</h2>
+      <div class="upload-container" style="max-width: 280px; margin: 15px auto; padding: 20px;">
+        <div class="upload-zone" id="upload-zone" style="padding: 30px 20px;">
+            <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+            <div class="upload-icon">📷</div>
+            <p class="upload-text" style="font-size: 16px;">Click to upload</p>
+            <p class="upload-subtext">JPG, PNG, GIF</p>
+        </div>
+        <img id="preview" alt="Image preview" class="preview-image">
+        <button id="submit-btn" class="submit-button" style="padding: 12px 24px; font-size: 14px;">Upload Photo</button>
+      </div>
+    </div>
+    <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Display or Hide Name</h2>
+        <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Nickname</h2>
     <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Username if any</h2>
 
 
