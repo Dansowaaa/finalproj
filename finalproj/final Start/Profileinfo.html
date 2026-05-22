@@ -12,7 +12,7 @@
         <b><a href="settings.html" id="Profile Information" onclick="addActiveClass('profile information');">Profile Information</a></b>
   </nav>
 <div class="search">
-  <input type="text" placeholder="Search.." class="ahg";>
+  <input type="text" placeholder="Search.." class="ahg">
 </div>
 <div class="page" id="Music-Page" style="display:block;margin-bottom: 2VH;" >
 
@@ -20,33 +20,37 @@
     <h2 style="color: #AC9834; background-color: #093150; padding: 5px; width: 90%">Profile</h2>
     <div style="background-color: #8B8C89; padding: 5px; width: 90%;">
       <h2 style="margin: 0;">Profile Picture</h2>
+      
       <div class="upload-container" style="max-width: 280px; margin: 15px auto; padding: 20px;">
-        <div class="upload-zone" id="upload-zone" style="padding: 30px 20px;">
-            <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+        
+        <input type="file" id="photo-upload" accept=".jpg, .jpeg, .png, .gif" style="display: none;">
+        
+        <label for="photo-upload" class="upload-zone" id="upload-zone" style="padding: 30px 20px;">
             <div class="upload-icon">📷</div>
             <p class="upload-text" style="font-size: 16px;">Click to upload</p>
             <p class="upload-subtext">JPG, PNG, GIF</p>
-        </div>
+        </label>
+        
         <img id="preview" alt="Image preview" class="preview-image">
-        <button id="submit-btn" class="submit-button" style="padding: 12px 24px; font-size: 14px;">Upload Photo</button>
+        
+        <button id="submit-btn" class="submit-button" style="padding: 12px 24px; font-size: 14px;" disabled>Upload Photo</button>
       </div>
+      
     </div>
     <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Display or Hide Name</h2>
-        <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Nickname</h2>
+    <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Nickname</h2>
     <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Username if any</h2>
-
-
 </div>
 </div>
+
 <div class="page" id="Music-Page" style="display:block;margin-bottom: 2VH;" >
   <div style="background-color:#385973 ;">
   <h2 style="color: #AC9834; background-color: #093150; padding: 5px; width: 90%">Personal Details</h2>  
-    <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Full Namee</h2>
+    <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Full Name</h2>
     <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Age</h2>
     <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Email</h2>
     <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Phone</h2>
     <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;"> Email Address</h2>
-
 </div>
 </div>
 
@@ -59,24 +63,65 @@
     <h2 style="background-color: #8B8C89; padding: 5px; width: 90%;">Location</h2>
 </div>
 </div>
+
 <div class="page" id="Music-Page" style="display:block;margin-bottom: 2VH;" >
-<div style="background-color:#012A4A"; height: 20px;>
+<div style="background-color:#012A4A; height: 20px;">
   <div class="navbar">
-    <a href="music1.html"><img src="img/homeicon.png" alt="Home" class="nav-icon" >
-        Home
-    </a>
-    <a href="search.html"><img src="img/searchicon.png" alt="Home" class="nav-icon">
-      Search
-    </a>
-    <a href="saved.html"><img src="img/savedicon.png" alt="Home" class="nav-icon">
-      Saved
-    </a>
-    <a href="settings.html" class="active"><img src="img/settingsicon.png" alt="Home" class="nav-icon">
-      Settings
-    </a>
+    <a href="music1.html"><img src="img/homeicon.png" alt="Home" class="nav-icon" >Home</a>
+    <a href="search.html"><img src="img/searchicon.png" alt="Search" class="nav-icon">Search</a>
+    <a href="saved.html"><img src="img/savedicon.png" alt="Saved" class="nav-icon">Saved</a>
+    <a href="settings.html" class="active"><img src="img/settingsicon.png" alt="Settings" class="nav-icon">Settings</a>
   </div> 
 </div>
+</div>
 
-</body>
+<script>
+  const fileInput = document.getElementById('photo-upload');
+  const uploadZone = document.getElementById('upload-zone');
+  const previewImage = document.getElementById('preview');
+  const submitBtn = document.getElementById('submit-btn');
+
+  // Trigger preview when file selection alters
+  fileInput.addEventListener('change', function() {
+    processFiles(this.files);
+  });
+
+  // Drag and drop states interacting with your CSS .dragover rules
+  ['dragenter', 'dragover'].forEach(eventName => {
+    uploadZone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      uploadZone.classList.add('dragover');
+    }, false);
+  });
+
+  ['dragleave', 'drop'].forEach(eventName => {
+    uploadZone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      uploadZone.classList.remove('dragover');
+    }, false);
+  });
+
+  uploadZone.addEventListener('drop', (e) => {
+    const dt = e.dataTransfer;
+    const files = dt.files;
+    fileInput.files = files; 
+    processFiles(files);
+  });
+
+  // Reads image data and displays preview element
+  function processFiles(files) {
+    const file = files[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        previewImage.src = e.target.result;
+        previewImage.classList.add('show'); // Activates your CSS slideIn rule
+        if (submitBtn) submitBtn.disabled = false; // Enables your upload button
+      }
+      reader.readAsDataURL(file);
+    }
+  }
+</script>
 <script src="script.js"></script>
+</body>
 </html>
