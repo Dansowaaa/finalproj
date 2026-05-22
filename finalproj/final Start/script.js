@@ -1,4 +1,4 @@
-const music = document.querySelector("#music");
+// const music = document.querySelector("#music");
 const audio = document.querySelector("#audiobook");
 
 const musicpage = document.querySelector("#Music-Page");
@@ -187,3 +187,4 @@ saveBtn.addEventListener('click', () => {
         alert('Please type a name before saving.');
     }
 });
+// 

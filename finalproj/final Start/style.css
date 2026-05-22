@@ -272,12 +272,12 @@ nav a {
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
 }
-/* 
+
 .trending-item{
   scroll-snap-align: start;
   text-align: center;
 } 
-*/
+
 .first-row{
   overflow-x: auto;
   overscroll-behavior-x: contain;
@@ -619,47 +619,4 @@ button:hover {
   max-width: 100%;
   margin-top: 15px;
   display: none;
-}
-
-
-
-
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 50px;
-  background-color: #f4f4f9;
-}
-.container {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  max-width: 350px;
-}
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-button:hover {
-  background-color: #218838;
-}
-.display-area {
-  margin-top: 20px;
-  font-weight: bold;
-  color: #333;
 }
