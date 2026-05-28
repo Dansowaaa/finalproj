@@ -57,6 +57,7 @@ function markCurrentNavLink() {
   }
 }
 
+
 document.addEventListener('DOMContentLoaded', function() {
   markCurrentNavLink();
   document.querySelectorAll('.first-row').forEach(function(row) {
