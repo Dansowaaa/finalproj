@@ -72,13 +72,14 @@ nav a.active {
 
 .first-row {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;  
   gap: 15px;
   margin-top: -20px;  
   position: relative;
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
+  padding: 20px 48px;
   flex: 0 0 100%;
   padding: 20px 48px;
   scroll-snap-align: start;
@@ -102,22 +103,20 @@ nav a.active {
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2) ;
 }
 
-
-
 .contents {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin:auto;
-    display: block;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 150px;
-    min-width: 150px;
-    max-height: 150px;
-    min-height: 150px;
-    align-content: center;
-    object-fit: cover;
-    display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin:auto;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 150px;
+  min-height: 150px;
+  align-content: center;
+  object-fit: cover;
+  display: block;
 }
 
 
@@ -256,7 +255,7 @@ nav a {
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   gap: 5%;
-  background-color:linear-gradient(#012A4A, #1B4965);
+  background: linear-gradient(#012A4A, #1B4965);
   transition: all 0.2s ease;
   color: #AC9834;
   font-weight: bold;
@@ -424,7 +423,7 @@ nav a {
 .carousel-button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-55%);
   width: 36px;
   height: 206px;
   padding: 10px;
@@ -444,6 +443,7 @@ nav a {
 
 .carousel-button:hover {
   opacity: 1;
+  background-color: #012A4A;
 }
 
 .carousel-button.left {
@@ -453,7 +453,17 @@ nav a {
 .carousel-button.right {
   right: 8px;
 }
-
+button {
+  padding: 10px;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #005a9e;
+}
 
 .centeredpage{
   color: #AC9834;
@@ -588,19 +598,10 @@ nav a {
   gap: 15px;
   max-width: 300px;
 }
-button {
-  padding: 10px;
-  background-color: #0078d4;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #005a9e;
-}
+
 #preview {
   max-width: 100%;
   margin-top: 15px;
   display: none;
 }
+

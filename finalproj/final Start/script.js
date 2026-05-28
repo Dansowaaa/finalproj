@@ -80,10 +80,17 @@ document.addEventListener('DOMContentLoaded', function() {
     wrapper.appendChild(rightBtn);
 
     leftBtn.addEventListener('click', function() {
-      row.scrollBy({ left: -row.clientWidth * 0.8, behavior: 'smooth' });
+      row.scrollBy({ 
+        left: -(row.clientWidth * 0.8), 
+        behavior: 'smooth' 
+        });
     });
+
     rightBtn.addEventListener('click', function() {
-      row.scrollBy({ left: row.clientWidth * 0.8, behavior: 'smooth' });
+      row.scrollBy({ 
+        left: row.clientWidth * 0.8, 
+        behavior: 'smooth' 
+        });
     });
   });
 });
