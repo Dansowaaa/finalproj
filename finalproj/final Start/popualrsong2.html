@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist App</title>
+    <title>Song App</title>
     <link rel="icon" type="image/png" href="img/da.jpg">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,14 +19,38 @@
       </div>
       <div class="page" id="Music-Page" style="display:block;margin-bottom: 8VH;" >
   <br>
-<img src="https://m.media-amazon.com/images/I/81uGF2wl-JL._UF1000,1000_QL80_.jpg" 
-alt="pink" class="books">
+  <h1 class="name">Die With a Smile</h1>
+  <h2 class="artistname">by Lady Gaga & Bruno Mars</h2>
+<img src="img/smile.png" alt="pink" class="songs">
 
-<div class="audioorread">
-    <b><button id="audio" style="font-size: 90%;">Audio Book Version </button></b>
-    <b><P style="color: rgb(156, 150, 39); font-size: 50px; margin: 0; margin-top: -17px; margin-left: 7px;">|</P></b>
-    <b><button id="read" style="font-size: 90%;">Read Version </button></b>
+<div class="songsorlyrics">
+    <b><button id="songs" style="font-size: 90%;">Music Video</button></b>
+    <b><p style="color: rgb(156, 150, 39); font-size: 50px; margin: 0; margin-top: -17px; margin-left: 7px;">|</p></b>
+    <b><button id="lyrics" style="font-size: 90%;">Lyrics and Audio</button></b>
 </div>
+
+<div id="video-container"></div>
+
+<script>
+document.getElementById('songs').addEventListener('click', function() {
+    const videoContainer = document.getElementById('video-container');
+    if (videoContainer.innerHTML === "") {
+        videoContainer.innerHTML = `
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/RVDCeVG90Rg?autoplay=1" 
+                    title="Die With A Smile Music Video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        `;
+    } else {
+        videoContainer.innerHTML = "";
+    }
+});
+</script>
 <br> <br>
   <div class="navbar">
     <a href="music1.html" class="active"><img src="img/homeicon.png" alt="Home" class="nav-icon">
@@ -43,6 +67,5 @@ alt="pink" class="books">
     </a>
   </div> 
 </div>
-</body>
-<script src="script.js"></script>
+<script src="script.js"></script></body>
 </html>

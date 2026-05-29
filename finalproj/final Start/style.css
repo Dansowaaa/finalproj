@@ -51,8 +51,13 @@ nav a.active {
   margin-right: auto;
   justify-content: center;
   margin-top: 21px;
-  margin-bottom: 20px;
-  color: #9c2222;
+  margin-bottom: 5px;
+  color: #9f5c5c;
+  border-radius: 7px;
+  border: none;
+  padding: 6px 12px;
+  background:#fdfdfd;
+  color:#012A4A;
 }
 
 .search-button {
@@ -664,6 +669,34 @@ button:hover {
   align-content: center;
   object-fit: cover;
 }
+.lyrics {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin:auto;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 150px;
+  min-width: 240px;
+  max-height: 350px;
+  min-height: 290px;
+  align-content: center;
+  object-fit: cover;
+}
+.albums {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin:auto;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 150px;
+  min-width: 170px;
+  max-height: 450px;
+  min-height: 250px;
+  align-content: center;
+  object-fit: cover;
+}
 
 .audioorread {
   display: flex;
@@ -672,6 +705,14 @@ button:hover {
   gap: 12px;
   margin-top: 20px;
 }
+.songsorlyrics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
 #audio, #read {
   padding: 10px 20px;
   background: linear-gradient(135deg, #d2bd9e 0%, #8ea333 100%);
@@ -698,23 +739,25 @@ button:hover {
 }
 
 #songs, #lyrics {
-  padding: 10px 20px;
-  background: linear-gradient(135deg, #d2bd9e 0%, #8ea333 100%);
-  color: #012A4A;
-  border: none;
-  border-radius: 10px;
-  font-size: 13px;
-  font-weight: 600px;
+  padding: 8px 26px; 
+  background: linear-gradient(135deg, #ffce1f 0%, #e7e763 70%); 
+  color: #011c38; 
+  border: 1px solid transparent; 
+  border-radius: 20px; 
+  font-size: 14px; 
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  opacity: 0.87;
 }
 #songs:hover, #lyrics:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(252, 163, 17, 0.5);
-  background: linear-gradient(135deg, #d2bd9e 0%, #8ea333 100%);
+  transform: translateY(-.1px); 
+  background: transparent;
+  color: #f4cc42;
+  border: 2px solid #f4cc42; 
+  box-shadow: 0 6px 15px rgba(244, 204, 66, 0.3);
 }
 #lyrics:active, #songs:active {
-  transform: translateY(-1px);
+  transform: translateY(-.1px);
   box-shadow: 0 4px 12px rgba(252, 163, 17, 0.3);
 }
 #lyrics:disabled, #songs:disabled {
@@ -727,4 +770,54 @@ button:hover {
   margin: -40px 0 10px 0;
   text-align: center;
   padding-bottom: 20px;
+  padding-top: 10px;
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: #ffd900dd; /* A slightly brighter, metallic gold */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 
+  0 0 20px rgba(255, 215, 0, 0.2);
+  margin-bottom: 8px;
+}
+.artistname {
+  color: #AC9834;
+  font-size: 20px;
+  padding-top: 10px;
+  margin: -40px 0 10px 0;
+  text-align: center;
+  padding-bottom: 20px;
+  content-align: center;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 1.0rem;
+  color: #E5C158; /* A softer complementary gold */
+  letter-spacing: 2px;
+  font-style: italic;
+  opacity: 0.9;
+}
+#video-container {
+    max-width: 600px;
+    width: 90%;
+    margin: 30px auto; 
+    display: block;    
+} /* Added this missing bracket right here to close the block! */
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
