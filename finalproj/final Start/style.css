@@ -103,7 +103,7 @@ nav a.active {
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2) ;
 }
 
-.contents {
+/* .contents {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin:auto;
@@ -114,6 +114,22 @@ nav a.active {
   min-width: 150px;
   max-height: 150px;
   min-height: 150px;
+  align-content: center;
+  object-fit: cover;
+  display: block;
+} */
+
+.songcontents {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin:auto;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 160px;
+  min-height: 170px;
   align-content: center;
   object-fit: cover;
   display: block;
@@ -634,6 +650,21 @@ button:hover {
   align-content: center;
   object-fit: cover;
 }
+.songs {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin:auto;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 150px;
+  min-width: 240px;
+  max-height: 350px;
+  min-height: 290px;
+  align-content: center;
+  object-fit: cover;
+}
+
 .audioorread {
   display: flex;
   align-items: center;
@@ -664,4 +695,36 @@ button:hover {
 #read:disabled, #audio:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+#songs, #lyrics {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #d2bd9e 0%, #8ea333 100%);
+  color: #012A4A;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#songs:hover, #lyrics:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(252, 163, 17, 0.5);
+  background: linear-gradient(135deg, #d2bd9e 0%, #8ea333 100%);
+}
+#lyrics:active, #songs:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(252, 163, 17, 0.3);
+}
+#lyrics:disabled, #songs:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.name {
+  color: #AC9834;
+  font-size: 30px;
+  margin: -40px 0 10px 0;
+  text-align: center;
+  padding-bottom: 20px;
 }
