@@ -119,6 +119,21 @@ nav a.active {
   display: block;
 }
 
+.bookcontents {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin:auto;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 210px;
+  min-height: 210px;
+  align-content: center;
+  object-fit: cover;
+  display: block;
+}
 
 
 /* nav {
@@ -626,7 +641,7 @@ button:hover {
   gap: 12px;
   margin-top: 20px;
 }
-#audiosize, #readsize {
+#audio, #read {
   padding: 10px 20px;
   background: linear-gradient(135deg, #d2bd9e 0%, #8ea333 100%);
   color: #012A4A;
@@ -636,4 +651,17 @@ button:hover {
   font-weight: 600px;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+#audio:hover, #read:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(252, 163, 17, 0.5);
+  background: linear-gradient(135deg, #d2bd9e 0%, #8ea333 100%);
+}
+#read:active, #audio:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(252, 163, 17, 0.3);
+}
+#read:disabled, #audio:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
