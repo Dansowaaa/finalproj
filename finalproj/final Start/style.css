@@ -84,13 +84,14 @@ nav a.active {
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
-  padding: 20px 48px;
+  padding: 20px 50px;
   flex: 0 0 100%;
-  padding: 20px 48px;
-  scroll-snap-align: start;
-  padding-left: 0;
-  overflow-x: auto;
-  text-align: center;
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar in IE/Edge */
+}
+
+.first-row::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome/Safari */
 }
 
 .first-row a:hover {

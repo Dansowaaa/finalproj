@@ -173,3 +173,13 @@ document.getElementById('songs').addEventListener('click', function() {
         videoContainer.innerHTML = "";
     }
 });
+
+function scrollCarousel(button, direction) {
+  const wrapper = button.parentElement;
+  const row = wrapper.querySelector('.first-row');
+  const scrollAmount = row.clientWidth * 0.8;
+  row.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
