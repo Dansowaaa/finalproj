@@ -40,7 +40,6 @@ nav a.active {
   text-shadow: 0 0 2px rgba(0, 0, 255, 0.5);
 }
 
-
 .ahg {
   text-align: left;
   width: 400px;
@@ -869,54 +868,14 @@ button:hover {
   color: #88c0b9;  /* Muted palette color */
   margin: 15px 0;
   transition: all 0.3s ease;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 /* Active line highlighting */
-.lyric-line-item.active-lyric {
-  color: #fffd6d;  /* Bright theme yellow/gold */
-  opacity: 1;
-  font-weight: bold;
-  transform: scale(1.08);
-}
-.lyrics-player-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  margin-top: 20px;
-}
-
-#lyric-audio-element {
-  width: 100%;
-  max-width: 500px;
-}
-
-#dynamic-lyrics-box {
-  width: 100%;
-  max-width: 600px;
-  height: 250px;
-  overflow-y: auto;
-  text-align: center;
-  padding: 20px;
-  background: rgba(134, 120, 212, 0.3);
-  border-radius: 12px;
-  scroll-behavior: smooth;
-}
-
-.lyric-line-item {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.2rem;
-  color: #d7cf40;
-  margin: 15px 0;
-  transition: all 0.3s ease;
-  opacity: 0.6;
-}
-
 .lyric-line-item.active-lyric {
   color: #fffd6d;
   opacity: 1;
   font-weight: bold;
   transform: scale(1.08);
+  text-shadow: 0 0 10px rgba(255, 253, 109, 0.5);
 }
