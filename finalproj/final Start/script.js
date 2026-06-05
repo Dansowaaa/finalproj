@@ -1,5 +1,5 @@
 // =========================================================================
-// 1. Navigation / Page Display Logic (Kept from your original setup)
+// 1. Navigation / Page Display Logic
 // =========================================================================
 const music = document.querySelector("#music");
 const audio = document.querySelector("#audioBook");
@@ -45,7 +45,6 @@ const lyricsDatabase = {
     [00:23.90] And I don't know what it all means
     [00:35.40] But since I survived, I realized
     [00:47.00] Wherever you go, that's where I'll follow
-
     [00:52.80] Nobody's promised tomorrow
     [00:55.60] So I'ma love you every night like it's the last night
     [01:05.50] Like it's the last night
@@ -82,7 +81,51 @@ const lyricsDatabase = {
     [01:21.00] And mother always told me be careful of who you love
     [01:24.00] And be careful of what you do 'cause the lie becomes the truth
     [01:29.00] Billie Jean is not my lover
-  `
+  `,
+  "taylor-swift-mo3": `
+    [00:00.00] (Intro)
+    [00:05.00] I'm riding in your car
+    [00:10.00] I'm looking at the stars
+    [00:15.00] You're telling me you love me
+    [00:20.00] And I know exactly where we are
+    [00:25.00] (Outro)
+  `,
+  "cruel-summer": `
+    [00:00.00] (Intro)
+    [00:02.00] Fever dream high in the quiet of the night
+    [00:05.50] You know that I caught it
+    [00:08.00] Bad, bad boy, shiny toy with a price
+    [00:11.00] You know that I bought it
+    [00:14.00] Killing me slow, out the window
+    [00:17.00] I'm always waiting for you to be waiting below
+    [00:20.00] Devils roll the dice, angels roll their eyes
+    [00:23.00] What doesn't kill me makes me want you more
+    [00:26.00] And it's new, the shape of your body
+    [00:29.00] It's blue, the feeling I've got
+    [00:31.00] And it's ooh, woah-oh
+    [00:33.50] It's a cruel summer
+  `,
+  "billie-birds": `
+[00:00.00] (Intro)
+[00:02.50] I want you to stay
+[00:06.00] 'Til I'm in the grave
+[00:09.00] 'Til I rot away, dead and buried
+[00:13.00] 'Til I'm in the casket you carry
+[00:17.00] If you go, I'm going too, uh
+[00:21.00] 'Cause it was always you
+[00:26.00] And if I'm turning blue, please don't save me
+[00:30.00] Nothing left to lose without my baby
+[00:34.50] Birds of a feather, we should stick together, I know
+[00:39.50] I said I'd never think I'd be better alone
+[00:43.50] Can't change the weather, might not be forever
+[00:47.50] But if it's forever, it's even better
+[01:03.00] I don't know what I'm crying for
+[01:07.00] I don't think I could love you more
+[01:11.00] It might not be long, but baby, I
+[01:15.50] I'll love you 'til the day that I die
+[01:19.00] 'Til the day that I die
+[01:23.00] 'Til the light leaves my eyes
+    `,
 };
 
 // Fixed time parser helper
@@ -143,6 +186,24 @@ if (musicVideoBtn) {
           <source src="Michael Jackson - Billie Jean.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>`;
+    } else if (mainHeading && mainHeading.textContent.includes("Taylor Swift")) {
+      videoHTML = `
+        <video controls autoplay>
+          <source src="taylor_stift_mo3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>`;
+    } else if (mainHeading && mainHeading.textContent.includes("Cruel Summer")) {
+      videoHTML = `
+        <video controls autoplay>
+          <source src="Taylor Swift - Cruel Summer.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>`;
+    } else if (mainHeading && mainHeading.textContent.includes("Birds of a Feather")) {
+      videoHTML = `
+        <video controls autoplay>
+          <source src="Billie Eilish - Birds of a Feather.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>`;
     } else {
       videoHTML = `
         <video controls autoplay>
@@ -173,6 +234,15 @@ if (lyricsAudioBtn) {
     if (mainHeading && mainHeading.textContent.includes("Billie Jean")) {
       audioSrc = "Michael Jackson - Billie Jean (Official Video).mp3"; 
       currentSong = "billie-jean";
+    } else if (mainHeading && mainHeading.textContent.includes("Taylor Swift")) {
+      audioSrc = "taylor_stift_mo3.mp3"; 
+      currentSong = "taylor-swift-mo3";
+    } else if (mainHeading && mainHeading.textContent.includes("Cruel Summer")) {
+      audioSrc = "Taylor Swift - Cruel Summer.mp3"; 
+      currentSong = "cruel-summer";
+    } else if (mainHeading && mainHeading.textContent.includes("Birds of a Feather")) {
+      audioSrc = "Billie Eilish - Birds of a Feather.mp3"; 
+      currentSong = "billie-birds";
     }
 
     // 1. Inject the audio player and the lyrics container box
