@@ -40,16 +40,17 @@ if (document.querySelector("#Music-Page")) {
 const lyricsDatabase = {
   "die-with-a-smile": `
     [00:00.00] (Intro)
-    [00:12.30] I mended all my habits, became a different man
-    [00:18.10] All the things you needed, I bought into your plan
-    [00:23.90] So if the world was ending, I'd wanna be next to you
-    [00:35.40] If the party was over and our time on Earth was through
-    [00:47.00] I'd wanna hold you just for a while
-    [00:52.80] And die with a smile
-    [00:55.60] If the world was ending, I'd wanna be next to you
-    [01:05.50] (Bruno Mars Verse)
-    [01:09.90] Ooh, lost in the words that you say
-    [01:15.70] Got me thinking I might not see another day
+    [00:12.30] I, I just woke up from a dream
+    [00:18.10] Where you and I had to say goodbye
+    [00:23.90] And I don't know what it all means
+    [00:35.40] But since I survived, I realized
+    [00:47.00] Wherever you go, that's where I'll follow
+
+    [00:52.80] Nobody's promised tomorrow
+    [00:55.60] So I'ma love you every night like it's the last night
+    [01:05.50] Like it's the last night
+    [01:09.90] If the world was ending, I'd wanna be next to you
+    [01:15.70] If the party was over and our time on Earth was through
     [01:21.20] 'Cause you're the only one I've ever really known
     [01:26.70] And I don't wanna do this on my own
     [01:32.60] So if the world was ending, I'd wanna be next to you
@@ -134,28 +135,24 @@ if (musicVideoBtn) {
 
     // Detect current song dynamically from the page heading
     const mainHeading = document.querySelector('.name');
-    let videoUrl = "";
+    let videoHTML = "";
 
     if (mainHeading && mainHeading.textContent.includes("Billie Jean")) {
-      // Billie Jean embed-safe stream
-      videoUrl = "https://www.youtube.com/embed/Zi_XLOBDo_Y?autoplay=1&mute=1";
+      videoHTML = `
+        <video controls autoplay>
+          <source src="Michael Jackson - Billie Jean.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>`;
     } else {
-      // Die With A Smile embed-safe stream
-      videoUrl = "https://www.youtube.com/embed/5-rBPPqerBE?autoplay=1&mute=1";
+      videoHTML = `
+        <video controls autoplay>
+          <source src="Lady Gaga - Die With A Smile.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>`;
     }
 
     // Inject video player template
-    videoContainer.innerHTML = `
-      <div class="video-wrapper">
-        <iframe 
-          src="${videoUrl}" 
-          title="Music Video Player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen>
-        </iframe>
-      </div>
-    `;
+    videoContainer.innerHTML = `<div class="video-wrapper">${videoHTML}</div>`;
   });
 }
 

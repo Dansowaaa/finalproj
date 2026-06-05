@@ -814,7 +814,8 @@ button:hover {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
-.video-wrapper iframe {
+.video-wrapper iframe,
+.video-wrapper video {
     position: absolute;
     top: 0;
     left: 0;
