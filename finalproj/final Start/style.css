@@ -714,32 +714,7 @@ button:hover {
   margin-top: 20px;
 }
 
-#audio, #read {
-  padding: 10px 20px;
-  background: linear-gradient(135deg, #d2bd9e 0%, #8ea333 100%);
-  color: #012A4A;
-  border: none;
-  border-radius: 10px;
-  font-size: 13px;
-  font-weight: 600px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-#audio:hover, #read:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(252, 163, 17, 0.5);
-  background: linear-gradient(135deg, #d2bd9e 0%, #8ea333 100%);
-}
-#read:active, #audio:active {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(252, 163, 17, 0.3);
-}
-#read:disabled, #audio:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-#songs, #lyrics , #music-video-btn, #lyrics-audio-btn{
+#songs, #lyrics, #music-video-btn, #lyrics-audio-btn, #audio, #read {
   padding: 8px 26px; 
   background: linear-gradient(135deg, #ffce1f 0%, #e7e763 70%); 
   color: #011c38; 
@@ -750,18 +725,18 @@ button:hover {
   cursor: pointer;
   opacity: 0.87;
 }
-  #songs:hover, #lyrics:hover, #music-video-btn:hover, #lyrics-audio-btn:hover {
+  #songs:hover, #lyrics:hover, #music-video-btn:hover, #lyrics-audio-btn:hover, #audio:hover, #read:hover {
   transform: translateY(-.1px); 
   background: transparent;
   color: #f4cc42;
   border: 2px solid #f4cc42; 
   box-shadow: 0 6px 15px rgba(244, 204, 66, 0.3);
 }
-#lyrics:active, #songs:active, #music-video-btn:active, #lyrics-audio-btn:active {
+#lyrics:active, #songs:active, #music-video-btn:active, #lyrics-audio-btn:active, #audio:active, #read:active {
   transform: translateY(-.1px);
   box-shadow: 0 4px 12px rgba(252, 163, 17, 0.3);
 }
-#lyrics:disabled, #songs:disabled, #music-video-btn:disabled, #lyrics-audio-btn:disabled {
+#lyrics:disabled, #songs:disabled, #music-video-btn:disabled, #lyrics-audio-btn:disabled, #audio:disabled, #read:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
