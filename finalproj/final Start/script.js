@@ -126,12 +126,15 @@ const lyricsDatabase = {
 [01:19.00] 'Til the day that I die
 [01:23.00] 'Til the light leaves my eyes
     `,
+<<<<<<< HEAD
   "i-hope-this-doesnt-find-you": `
 [00:00.00] (Intro)
 [00:05.00] This is a sample excerpt for the audiobook.
 [00:30.00] Chapter 1 starts: The narrator speaks...
 [01:00.00] Chapter 1 continues: A short passage.
     `,
+=======
+>>>>>>> 8521bf547dcd36b83bab9c8dcaa6c91836fe5d25
 };
 
 // Fixed time parser helper
@@ -240,9 +243,12 @@ if (lyricsAudioBtn) {
     if (mainHeading && mainHeading.textContent.includes("Billie Jean")) {
       audioSrc = "Michael Jackson - Billie Jean (Official Video).mp3"; 
       currentSong = "billie-jean";
+<<<<<<< HEAD
     } else if (mainHeading && mainHeading.textContent.includes("I Hope This Doesn't Find You")) {
       audioSrc = "I Hope This Doesn't Find You.mp3";
       currentSong = "i-hope-this-doesnt-find-you";
+=======
+>>>>>>> 8521bf547dcd36b83bab9c8dcaa6c91836fe5d25
     } else if (mainHeading && mainHeading.textContent.includes("Taylor Swift")) {
       audioSrc = "taylor_stift_mo3.mp3"; 
       currentSong = "taylor-swift-mo3";
